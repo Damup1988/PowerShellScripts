@@ -1,4 +1,4 @@
-$bicep = "C:\_oneDrive\OneDrive\_Coding\_Projects\PowerShell\PSDamirSafarov\AZNew-VMBicep\VMB1MSEUN2.bicep"
+$bicep = "C:\_bufer\_scripts\PowerShellDamirSafarov\AZNew-VMBicep\VMB1MSEUN2.bicep"
 $password = Read-Host -AsSecureString
 
 New-AzResourceGroupDeployment `
@@ -6,6 +6,6 @@ New-AzResourceGroupDeployment `
     -ResourceGroupName "RG-EUN-001" `
     -TemplateFile $bicep `
     -admin "dutyadmin" `
-    -vmName "vm003eunaz" `
+    -vmName "vm010eunaz" `
     -password $password `
-    -vmSize "Standard_B1ms"
+    -vmSize "Standard_DS3_v2"
