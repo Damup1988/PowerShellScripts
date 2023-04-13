@@ -1,8 +1,8 @@
 # Replace "C:\example\directory" with the path to the directory you want to list
-$rootPath = "V:\"
+$rootPath = "C:\_bufer"
 
 # Create a CSV file to output the results to
-$outputFile = "C:\_bufer\SizeReport.csv"
+$outputFile = "C:\_bufer\SizeReport\SizeReport3.csv"
 "Type;FullPath;Size" | Out-File $outputFile -Encoding UTF8
 
 # Recursively list all folders and files under the root path, including hidden items
@@ -19,10 +19,12 @@ foreach ($item in $items) {
     if ($type -eq "File") {
         $size = "{0:N0} bytes" -f $item.Length
     } else {
-        $size = "{0:N0} bytes" -f (Get-ChildItem `
-                                    -Recurse `
-                                    -Force $item.FullName `
-                                    | Measure-Object -Property Length -Sum).Sum
+        $childItems = Get-ChildItem -Recurse -Force $item.FullName
+        if ($childItems) {
+            $size = "{0:N0} bytes" -f ($childItems | Measure-Object -Property Length -Sum).Sum
+        } else {
+            $size = "0 bytes"
+        }
     }
     $path = $item.FullName
     
