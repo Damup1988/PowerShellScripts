@@ -13,6 +13,7 @@ param vmName string
 @allowed(
   [
     'Standard_B1ms'
+    'Standard_DS3_v2'
   ]
 )
 param vmSize string
