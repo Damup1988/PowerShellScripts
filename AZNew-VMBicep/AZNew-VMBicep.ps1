@@ -7,6 +7,6 @@ New-AzResourceGroupDeployment `
     -ResourceGroupName "RG-EUN-001" `
     -TemplateFile $bicep `
     -admin "dutyadmin" `
-    -vmName "vm010eunaz" `
+    -vmName $vmName `
     -password $password `
     -vmSize "Standard_DS3_v2"
