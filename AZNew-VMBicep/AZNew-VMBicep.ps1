@@ -1,4 +1,5 @@
-$bicep = "C:\_bufer\_scripts\PowerShellDamirSafarov\AZNew-VMBicep\VMB1MSEUN2.bicep"
+$bicep = "C:\_oneDrive\OneDrive\_Coding\_Projects\PowerShell\PSDamirSafarov\AZNew-VMBicep\VMB1MSEUN2.bicep"
+Write-Host "Enter password for new vm:" -ForegroundColor Yellow
 $password = Read-Host -AsSecureString
 $vmName = ""
 
@@ -9,4 +10,4 @@ New-AzResourceGroupDeployment `
     -admin "dutyadmin" `
     -vmName $vmName `
     -password $password `
-    -vmSize "Standard_DS3_v2"
+    -vmSize "Standard_B1ms"
