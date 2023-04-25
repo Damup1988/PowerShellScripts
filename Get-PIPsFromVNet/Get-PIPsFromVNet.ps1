@@ -13,3 +13,6 @@ foreach ($subnet in $vnet.Subnets) {
         }
     }
 }
+
+#to get all ipconfigs
+#$result = Get-AzVirtualNetwork -Name $VNet.Name  -ResourceGroupName $ResourceGroupName -ExpandResource 'subnets/ipConfigurations'
