@@ -1,0 +1,9 @@
+.\Deploy-AzVM.ps1 `
+    -subId "" `
+    -vmName "" `
+    -rg "" `
+    -vmSize "" `
+    -vnet "" `
+    -subnet "" `
+    -mytags @{
+        ""="";}
