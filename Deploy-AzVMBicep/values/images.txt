@@ -1,0 +1,5 @@
+az vm image list --all -o table
+
+2022-datacenter-azure-edition
+2019-Datacenter
+2019-datacenter-gensecond
