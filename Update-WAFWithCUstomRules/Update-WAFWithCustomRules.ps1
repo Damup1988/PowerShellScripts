@@ -14,8 +14,8 @@ foreach ($id in $allSubs) {
 # we need only WAFs that are enabled and in prevention mode
 $enabledWAFs = @()
 foreach ($waf in $WAFs) {
-    $wafState = ($waf | select PolicySettings).PolicySettings.State
-    $wafMode = ($waf | select PolicySettings).PolicySettings.Mode
+    $wafState = ($waf | Select-Object PolicySettings).PolicySettings.State
+    $wafMode = ($waf | Select-Object PolicySettings).PolicySettings.Mode
     if ($wafState -eq "Enabled" -and $wafMode -eq "Prevention") {
         $enabledWAFs += $waf
     }
@@ -24,17 +24,28 @@ foreach ($waf in $WAFs) {
 # create new rule
 $ExclusionIPaddresses = @("54.217.50.18","52.208.202.111","52.49.144.209")
 $variable = New-AzApplicationGatewayFirewallMatchVariable -VariableName RemoteAddr
-$condition = New-AzApplicationGatewayFirewallCondition -MatchVariable $variable -Operator IPMatch -MatchValue $ExclusionIPaddresses
-$newRule = New-AzApplicationGatewayFirewallCustomRule -Name "CHG0049219" -Priority 77 -RuleType MatchRule -MatchCondition $condition -Action Allow -State Enabled
+$condition = New-AzApplicationGatewayFirewallCondition `
+    -MatchVariable $variable `
+    -Operator IPMatch `
+    -MatchValue $ExclusionIPaddresses
+$newRule = New-AzApplicationGatewayFirewallCustomRule `
+    -Name "CHG0049219" `
+    -Priority 77 `
+    -RuleType MatchRule `
+    -MatchCondition $condition `
+    -Action Allow `
+    -State Enabled
 
 # add new rule to the existing rules
 foreach ($waf in $enabledWAFs) {
     $currSub = Select-AzSubscription -SubscriptionId $waf.Id.Split('/')[2]
-    $allCustomRules = (get-AzApplicationGatewayFirewallPolicy -Name $waf.Name -ResourceGroupName $waf.ResourceGroupName).CustomRules
+    $allCustomRules = (get-AzApplicationGatewayFirewallPolicy `
+        -Name $waf.Name `
+        -ResourceGroupName $waf.ResourceGroupName).CustomRules
     write-host "$($waf.Name)" -foregroundcolor yellow
     $allCustomRules
     $waf.Name >> $backupFile
-    $allCustomRules | fl >> $backupFile
+    $allCustomRules | Format-List >> $backupFile
     #$allCustomRules += $newRule
     #Set-AzApplicationGatewayFirewallPolicy -Name $waf.Name -ResourceGroupName $waf.ResourceGroupName -CustomRule $allCustomRules
 }
