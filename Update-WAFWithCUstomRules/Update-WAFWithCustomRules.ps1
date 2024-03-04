@@ -22,14 +22,14 @@ foreach ($waf in $WAFs) {
 }
 
 # create new rule
-$ExclusionIPaddresses = @("54.217.50.18","52.208.202.111","52.49.144.209")
+$ExclusionIPaddresses = @("xxx.xxx.xxx.xxx","xxx.xxx.xxx.xxx","xxx.xxx.xxx.xxx")
 $variable = New-AzApplicationGatewayFirewallMatchVariable -VariableName RemoteAddr
 $condition = New-AzApplicationGatewayFirewallCondition `
     -MatchVariable $variable `
     -Operator IPMatch `
     -MatchValue $ExclusionIPaddresses
 $newRule = New-AzApplicationGatewayFirewallCustomRule `
-    -Name "CHG0049219" `
+    -Name "" `
     -Priority 77 `
     -RuleType MatchRule `
     -MatchCondition $condition `
