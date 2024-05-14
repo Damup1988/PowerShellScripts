@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-using Outlook = Microsoft.Office.Interop.Outlook;
-using Office = Microsoft.Office.Core;
 using Microsoft.Office.Interop.Outlook;
 
 namespace SingleQuotesRemovingAddIn
@@ -24,7 +19,6 @@ namespace SingleQuotesRemovingAddIn
 
             _items = sentFolder.Items;
             _items.ItemAdd += new ItemsEvents_ItemAddEventHandler(RemoveSingleQuots);
-            //sentFolder.Items.ItemAdd += new Outlook.ItemsEvents_ItemAddEventHandler(RemoveSingleQuots);
         }
 
         private void ThisAddIn_Shutdown(object sender, EventArgs e)
@@ -49,8 +43,23 @@ namespace SingleQuotesRemovingAddIn
 
         void RemoveSingleQuots(object item)
         {
+            string result = null;
             MailItem mailItem = (MailItem)item;
-            mailItem.To = mailItem.To.Replace("'", "");
+            if (mailItem.To.Contains("'"))
+            {
+                Recipients recipients = mailItem.Recipients;
+
+                List<string> to = new List<string>();
+                foreach (Recipient recipient in recipients)
+                {
+                    string name = recipient.Name.Replace("'","");
+                    string finalTo = name + " " + "<" + recipient.Address + ">";
+                    to.Add(finalTo);
+                }
+                result = String.Join(";",to.ToArray());
+            }
+            mailItem.To = result;
+            mailItem.Recipients.ResolveAll();
             mailItem.Save();
         }
     }
