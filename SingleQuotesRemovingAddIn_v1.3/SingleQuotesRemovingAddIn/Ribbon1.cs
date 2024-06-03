@@ -25,25 +25,35 @@ namespace SingleQuotesRemovingAddIn
             foreach (object item in _items)
             {
                 string result = null;
-                MailItem mailItem = item as MailItem;
-                if (mailItem != null)
+                MailItem mailItem = (MailItem)item;
+                if (mailItem.To.Contains("'"))
                 {
-                    if (mailItem.To != null && mailItem.To.Contains("'"))
+                    Recipients recipients = mailItem.Recipients;
+
+                    List<string> to = new List<string>();
+                    foreach (Recipient recipient in recipients)
                     {
-                        Recipients recipients = mailItem.Recipients;
-                        List<string> to = new List<string>();
-                        foreach (Recipient recipient in recipients)
+                        if (recipient.Type == 1)
                         {
                             string name = recipient.Name.Replace("'", "");
-                            string finalTo = name + " " + "<" + recipient.Address + ">";
+
+                            string finalTo = null;
+                            if (recipient.Name.Replace("'", "") == recipient.Address)
+                            {
+                                finalTo = name;
+                            }
+                            else
+                            {
+                                finalTo = name + " " + "<" + recipient.Address + ">";
+                            }
                             to.Add(finalTo);
                         }
-                        result = String.Join(";", to.ToArray());
-                        mailItem.To = result;
-                        mailItem.Recipients.ResolveAll();
-                        mailItem.Save();
                     }
+                    result = String.Join(";", to.ToArray());
                 }
+                mailItem.To = result;
+                mailItem.Recipients.ResolveAll();
+                mailItem.Save();
             }
         }
     }
