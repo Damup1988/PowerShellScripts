@@ -26,3 +26,17 @@ C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.1\SingleQuotesRemoving
 C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.1\SingleQuotesRemovingAddIn\obj\Debug\SingleQu.A38C3485.Up2Date
 C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.1\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.dll
 C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.1\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.pdb
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\bin\Debug\SingleQuotesRemovingAddIn.dll
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\bin\Debug\SingleQuotesRemovingAddIn.pdb
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\bin\Debug\SingleQuotesRemovingAddIn.dll.manifest
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\bin\Debug\SingleQuotesRemovingAddIn.vsto
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.csproj.AssemblyReference.cache
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.Properties.Resources.resources
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.Ribbon1.resources
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.csproj.GenerateResource.cache
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.csproj.CoreCompileInputs.cache
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQu.A38C3485.Up2Date
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.dll
+C:\_bufer\_scripts\MyScripts\SingleQuotesRemovingAddIn_v1.3\SingleQuotesRemovingAddIn\obj\Debug\SingleQuotesRemovingAddIn.pdb

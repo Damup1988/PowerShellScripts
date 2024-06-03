@@ -25,15 +25,14 @@ namespace SingleQuotesRemovingAddIn
             foreach (object item in _items)
             {
                 string result = null;
-                MailItem mailItem = (MailItem)item;
-                if (mailItem.To.Contains("'"))
+                MailItem mailItem = item as MailItem;
+                if (mailItem != null)
                 {
-                    Recipients recipients = mailItem.Recipients;
-
-                    List<string> to = new List<string>();
-                    foreach (Recipient recipient in recipients)
+                    if (mailItem.To != null && mailItem.To.Contains("'"))
                     {
-                        if (recipient.Type == 1)
+                        Recipients recipients = mailItem.Recipients;
+                        List<string> to = new List<string>();
+                        foreach (Recipient recipient in recipients)
                         {
                             string name = recipient.Name.Replace("'", "");
 
@@ -48,12 +47,12 @@ namespace SingleQuotesRemovingAddIn
                             }
                             to.Add(finalTo);
                         }
+                        result = String.Join(";", to.ToArray());
+                        mailItem.To = result;
+                        mailItem.Recipients.ResolveAll();
+                        mailItem.Save();
                     }
-                    result = String.Join(";", to.ToArray());
                 }
-                mailItem.To = result;
-                mailItem.Recipients.ResolveAll();
-                mailItem.Save();
             }
         }
     }
