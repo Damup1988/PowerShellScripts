@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Office.Interop.Outlook;
 
 namespace SingleQuotesRemovingAddIn
@@ -52,11 +53,23 @@ namespace SingleQuotesRemovingAddIn
                 List<string> to = new List<string>();
                 foreach (Recipient recipient in recipients)
                 {
-                    string name = recipient.Name.Replace("'","");
-                    string finalTo = name + " " + "<" + recipient.Address + ">";
-                    to.Add(finalTo);
+                    if (recipient.Type == 1)
+                    {
+                        string name = recipient.Name.Replace("'", "");
+
+                        string finalTo = null;
+                        if (recipient.Name.Replace("'", "") == recipient.Address)
+                        {
+                            finalTo = name;
+                        }
+                        else
+                        {
+                            finalTo = name + " " + "<" + recipient.Address + ">";
+                        }
+                        to.Add(finalTo);
+                    }
                 }
-                result = String.Join(";",to.ToArray());
+                result = String.Join(";", to.ToArray());
             }
             mailItem.To = result;
             mailItem.Recipients.ResolveAll();
