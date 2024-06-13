@@ -70,10 +70,10 @@ namespace SingleQuotesRemovingAddIn
                     }
                 }
                 result = String.Join(";", to.ToArray());
+                mailItem.To = result;
+                mailItem.Recipients.ResolveAll();
+                mailItem.Save();
             }
-            mailItem.To = result;
-            mailItem.Recipients.ResolveAll();
-            mailItem.Save();
         }
     }
 }
