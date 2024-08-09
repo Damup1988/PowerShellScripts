@@ -1,0 +1,1 @@
+To install bicep: winget install -e --id Microsoft.Bicep

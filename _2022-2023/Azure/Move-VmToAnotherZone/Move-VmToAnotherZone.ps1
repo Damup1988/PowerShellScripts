@@ -1,0 +1,1 @@
+# .\Change-RegionToZoneARM7.ps1 -VMName MyVM -TargetZone 3 -ResourceGroup MyResourceGroup -SkipAZcheck $True
