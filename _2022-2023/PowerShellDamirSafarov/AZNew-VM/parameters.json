@@ -1,0 +1,87 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "northeurope"
+        },
+        "networkInterfaceName": {
+            "value": "vm002eunaz631"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/aaeca9fd-f156-4439-882e-7a446a0203b4/resourceGroups/RG-EUN-001/providers/Microsoft.Network/virtualNetworks/VNet-EUN-001"
+        },
+        "publicIpAddressName": {
+            "value": "vm002eunaz-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "pipDeleteOption": {
+            "value": "Detach"
+        },
+        "virtualMachineName": {
+            "value": "vm002eunaz"
+        },
+        "virtualMachineComputerName": {
+            "value": "vm002eunaz"
+        },
+        "virtualMachineRG": {
+            "value": "RG-EUN-001"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ms"
+        },
+        "nicDeleteOption": {
+            "value": "Detach"
+        },
+        "adminUsername": {
+            "value": "dutyadmin"
+        },
+        "adminPassword": {
+            "value": "BArakuda@123"
+        },
+        "patchMode": {
+            "value": "Manual"
+        },
+        "enableHotpatching": {
+            "value": false
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "rgeun001diag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/aaeca9fd-f156-4439-882e-7a446a0203b4/resourceGroups/RG-EUN-001/providers/Microsoft.Storage/storageAccounts/rgeun001diag"
+        },
+        "autoShutdownStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownTime": {
+            "value": "19:00"
+        },
+        "autoShutdownTimeZone": {
+            "value": "UTC"
+        },
+        "autoShutdownNotificationStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownNotificationLocale": {
+            "value": "en"
+        },
+        "autoShutdownNotificationEmail": {
+            "value": "Damir_Safarov@epam.com"
+        }
+    }
+}
