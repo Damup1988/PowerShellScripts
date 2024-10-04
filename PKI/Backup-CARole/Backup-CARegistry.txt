@@ -1,0 +1,1 @@
+reg export "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\CONTADAROOTCA-CA" "C:\temp\CertSvc_Configuration.reg" /y
