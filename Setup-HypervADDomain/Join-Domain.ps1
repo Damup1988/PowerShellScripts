@@ -2,10 +2,10 @@
 $NICName = (Get-NetAdapter)[0].Name
 
 $InterfaceAlias = $NICName
-$IPAddress = "10.0.20.101"
+$IPAddress = "10.0.1.13"
 $PrefixLength = 24
-$DefaultGateway = "10.0.20.1"
-$DNS1 = "10.0.20.10"
+$DefaultGateway = "10.0.1.1"
+$DNS1 = "10.0.1.10"
 
 New-NetIPAddress `
     -InterfaceAlias $InterfaceAlias `
@@ -18,8 +18,8 @@ Set-DnsClientServerAddress `
     -ServerAddresses $DNS1
 
 # Define variables
-$NewComputerName = "TCL01"  # Specify the new name for the computer
-$DomainName = "target.local"          # Specify the domain to join
+$NewComputerName = "AWS01"  # Specify the new name for the computer
+$DomainName = "adatum.local"          # Specify the domain to join
 $DomainUser = "dutyadmin"          # Specify the domain admin username
 $DomainPassword = "BArakuda@123"      # Specify the domain admin password
 
@@ -35,3 +35,4 @@ Add-Computer -NewName $NewComputerName -DomainName $DomainName -Credential $Cred
 
 # Optional: Restart the computer after joining the domain
 Restart-Computer -Force
+

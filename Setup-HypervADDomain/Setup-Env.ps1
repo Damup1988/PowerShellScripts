@@ -9,11 +9,13 @@ $NewVMName = "VM11"
 $VHDXFolder = "D:\_VMs"
 $SourceVHDXPath = "$VHDXFolder\IMAGEWS2022STDGEN1.vhdx"
 $NewVMDisk = Copy-Item -Path $SourceVHDXPath -Destination "$VHDXFolder\$NewVMName.vhdx"
-New-VM `
-    -Name $NewVMName `
-    -MemoryStartupBytes 2Gb `
-    -VHDPath "$VHDXFolder\$NewVMName.vhdx" `
-    -SwitchName $switchName
+Start-Job -ScriptBlock {Param([string]$NewVMName,[string]$VHDXFolderD)
+    New-VM `
+        -Name $NewVMName `
+        -MemoryStartupBytes 2Gb `
+        -VHDPath "$VHDXFolder\$NewVMName.vhdx" `
+        -SwitchName $switchName
+} -ArgumentList $NewVMName,$VHDXFolderD
 
 # Win Server 2022 Std Gen2
 $NewVMName = "VM12"
