@@ -1,9 +1,9 @@
 $NICName = (Get-NetAdapter)[0].Name
 
 $InterfaceAlias = $NICName
-$IPAddress = "10.0.4.10"
+$IPAddress = "10.0.3.10"
 $PrefixLength = 24
-$DefaultGateway = "10.0.4.1"
+$DefaultGateway = "10.0.3.1"
 $DNS1 = "127.0.0.1"
 
 New-NetIPAddress `
@@ -16,7 +16,7 @@ Set-DnsClientServerAddress `
     -InterfaceAlias $InterfaceAlias `
     -ServerAddresses $DNS1
 
-Rename-Computer -NewName FDC01
+Rename-Computer -NewName MGMTDC01
 Install-WindowsFeature "AD-Domain-Services" -IncludeManagementTools
 
 Start-Sleep -Seconds 10

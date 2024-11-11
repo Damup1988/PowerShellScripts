@@ -3,8 +3,8 @@ Install-ADDSForest `
 -CreateDnsDelegation:$false `
 -DatabasePath "C:\Windows\NTDS" `
 -DomainMode "WinThreshold" `
--DomainName "ADATUM.local" `
--DomainNetbiosName "ADATUM" `
+-DomainName "MGMT.local" `
+-DomainNetbiosName "MGMT" `
 -ForestMode "WinThreshold" `
 -InstallDns:$true `
 -LogPath "C:\Windows\NTDS" `
