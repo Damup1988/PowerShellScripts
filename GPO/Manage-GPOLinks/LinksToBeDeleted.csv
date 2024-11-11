@@ -1,0 +1,63 @@
+GpoName;OU;Reason
+IPGL-Burbach Policy 01;OU=Users,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled user accounts
+IPGL_PKI_AutoEnrollment_PUSH;OU=Users,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled user accounts
+IPGL_PKI_AutoEnrollment_PUSH;OU=Laptops,OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_ProgramData\IPG Laser GmbH_Write Access;OU=Enabled,OU=Users,OU=IPGRT-MI,OU=CIS,DC=ipgphotonics,DC=com;The GPO doesn't have user settings
+IPGL-Disable_Windows_FW_GPO;OU=SG,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_Disable Win10_FeedsTaskbar;OU=R&D-SD,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_ComputerMachinePassword_180Day;OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPGP-SCCM-Windows Updates;OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPGP-SCCM-Windows Updates;OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPGP-SCCM-Windows Updates;OU=Servers,OU=EMEA,OU=Global Services,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_MBAM_Laptops;OU=YLA,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_MBAM_Laptops;OU=Laptops,OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPGP-SCCM-Certificates Policy;OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPGP-SCCM-Certificates Policy;OU=Test Environment,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+Wireless Policy;OU=FC,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+Wireless Policy;OU=FBA,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+Wireless Policy;OU=LDM,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+Wireless Policy;OU=KIOSK PC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_LocalIntranetSites_For_IE;OU=Others,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_LocalIntranetSites_For_IE;OU=FC,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_LocalIntranetSites_For_IE;OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_LocalIntranetSites_For_IE;OU=LDM,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_LocalIntranetSites_For_IE;OU=LDM,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_LocalIntranetSites_For_IE;OU=FC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_LocalIntranetSites_For_IE;OU=Servers,OU=EMEA,OU=Global Services,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RDP_EnableEndConfigure;OU=Enabled,OU=Users,OU=IPGRT-MI,OU=CIS,DC=ipgphotonics,DC=com;The GPO doesn't have user settings
+IPGL_Disable Win10 telemetry;OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_BG_PC_INFO;OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_BG_PC_INFO;OU=Servers,OU=EMEA,OU=Global Services,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_Microsoft BitLocker Administration_Client-X64;OU=YLA,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_Microsoft BitLocker Administration_Client-X64;OU=R&D-SD,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_Microsoft BitLocker Administration_Client-X64;OU=Laptops,OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RDP_LimitAccessConfigure;OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RDP_LimitAccessConfigure;OU=Desktops,OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RDP_LimitAccessConfigure;OU=Laptops,OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_SCCM_CLIENT_EUR;OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_SCCM_CLIENT_EUR;OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=FC,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=LDM,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=YLA-BrunTestPC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=LDM,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=KIOSK PC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=FP-POD-PC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+0.IPG_Local_Administrator_Password;OU=Servers,OU=EMEA,OU=Global Services,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=Computers,OU=IPGSP-BC,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=FC,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=LDM,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=YLA-BrunTestPC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=LDM,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=KIOSK PC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=FP-POD-PC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=Servers,OU=EMEA,OU=Global Services,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPG_Local admin password management solution-X64;OU=Enabled,OU=Users,OU=IPGRT-MI,OU=CIS,DC=ipgphotonics,DC=com;The GPO doesn't have user settings
+IPGL_RemoteAssistantAccess;OU=Enabled,OU=Users,OU=IPGRT-MI,OU=CIS,DC=ipgphotonics,DC=com;The GPO doesn't have user settings
+IPGL_RemoteAssistantAccess;OU=Others,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RemoteAssistantAccess;OU=FC,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RemoteAssistantAccess;OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RemoteAssistantAccess;OU=LDM,OU=Laptops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RemoteAssistantAccess;OU=LDM,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RemoteAssistantAccess;OU=FC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
+IPGL_RemoteAssistantAccess;OU=FP-POD-PC,OU=Desktops,OU=Computers,OU=IPGL-BU,OU=EMEA,DC=ipgphotonics,DC=com;No enabled computer accounts
