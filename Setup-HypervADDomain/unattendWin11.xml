@@ -27,12 +27,12 @@
             <UserAccounts>
                 <AdministratorPassword>
                     <PlainText>true</PlainText>
-                    <Value></Value>
+                    <Value>BArakuda@123</Value>
                 </AdministratorPassword>
                 <LocalAccounts>
                     <LocalAccount wcm:action="add">
                         <Group>Administrators</Group>
-                        <Name>User</Name>
+                        <Name>Administrator</Name>
                         <Password>
                             <PlainText>true</PlainText>
                             <Value>BArakuda@123</Value>
@@ -61,12 +61,7 @@
                 </RunSynchronousCommand>
                 <RunSynchronousCommand wcm:action="add">
                     <Order>2</Order>
-                    <Path>net user User /active:Yes</Path>
-                    <WillReboot>Never</WillReboot>
-                </RunSynchronousCommand>
-                <RunSynchronousCommand wcm:action="add">
-                    <Order>3</Order>
-                    <Path>net user User /passwordreq:yes</Path>
+                    <Path>net user Administrator /active:Yes</Path>
                     <WillReboot>Never</WillReboot>
                 </RunSynchronousCommand>
             </RunSynchronous>

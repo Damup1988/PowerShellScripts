@@ -1,0 +1,2 @@
+Name,Domain,IPAddress,Prefix,Gateway,DNS,vCPU,RAMGB,Image,Gen
+WS004,LAPS.local,10.0.5.13,24,10.0.5.10,10.0.5.10,2,4,Win11,2
